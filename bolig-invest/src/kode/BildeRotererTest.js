@@ -4,7 +4,7 @@ import img1 from '../bilder/1.jpg';
 import img2 from '../bilder/2.jpg';
 import img3 from '../bilder/3.jpg';
 
-const Roterer = () => {
+const Roterert = () => {
   const images = [img1, img2, img3];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,4 +32,4 @@ const Roterer = () => {
   );
 };
 
-export default Roterer;
+export default Roterert;
