@@ -1,17 +1,12 @@
 import '../App.css';
-import { Routes, Route, Link } from 'react-router-dom';
-import Hjemmeside from '../sider/Hjemmeside.js';
-import AnsateSide from '../sider/AnsateSide.js';
-import ProduktSide from '../sider/ProduktSide.js';
+import { Link } from 'react-router-dom';
 
 function TopLinker() {
   return (
     <div className="header-container">
+      <div className="logo">Bolig Invest AS</div>
       <nav>
         <ul className="header-nav">
-          <li>
-            <Link to="/">Om oss</Link>
-          </li>
           <li>
             <Link to="/ProduktSide">Prosjekter</Link>
           </li>
@@ -23,12 +18,6 @@ function TopLinker() {
           </li>
         </ul>
       </nav>
-      <Routes>
-        <Route path="/" element={<h1>Welcome to Home</h1>} />
-        <Route path="/AnsateSide" element={<AnsateSide />} />
-        <Route path="/Hjemmeside" element={<Hjemmeside />} />
-        <Route path="/ProduktSide" element={<ProduktSide />} />
-      </Routes>
     </div>
   );
 }
