@@ -27,6 +27,14 @@
   .App-link {
     color: #61dafb;
   }
+
+  .header-teks {
+    text-align: right;
+    /* display: flex; */
+    padding-left: 16vh;
+  }
+
+
   
   @keyframes App-logo-spin {
     from {
@@ -37,3 +45,96 @@
     }
   }
   
+
+
+  /* for headern */
+  /* .header-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .header-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .header-nav li {
+    margin: 0 20px;
+  }
+  
+  .header-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+  
+  .header-nav a:hover {
+    color: gray;
+  } */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo-stil */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Navigasjonsmeny */
+.header-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px; /* Mellomrom mellom elementene */
+}
+
+.header-nav li {
+  position: relative;
+  font-size: 18px;
+}
+
+/* Navigasjonslenker */
+.header-nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: #000;
+}
+
+/* Understrek */
+.header-nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background-color: #aaa;
+  transition: width 0.3s ease;
+  margin-top: 5px;
+}
+
+.header-nav a:hover::after {
+  width: 100%; /* Understreken dekker hele teksten */
+}
+
+
+
+
+/* ikke lenger for header   */

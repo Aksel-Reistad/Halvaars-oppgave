@@ -1,32 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import "./bilder/1.jpg";
-import "./bilder/2.jpg";
-import "./bilder/3.jpg";
-import Roterer from'./kode/BildeRoterer.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import TopLinker from './kode/Header.js';
+import Hjemmeside from './sider/Hjemmeside.js';
+import AnsateSide from './sider/AnsateSide.js';
+import ProduktSide from './sider/ProduktSide.js';
 
 function App() {
   return (
-    <div className="App">
-      
-      <Roterer></Roterer>
-    
-
-      
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <TopLinker />
+        <Routes>
+          <Route path="/Hjemmeside" element={<Hjemmeside />} />
+          <Route path="/AnsateSide" element={<AnsateSide />} />
+          <Route path="/ProduktSide" element={<ProduktSide />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
