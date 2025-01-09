@@ -10,10 +10,14 @@ const Roterer = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % images.length;
+        console.log("den endrer seg på grunnen av tid");
+        return nextIndex;
+      });
     }, 5000);
-
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -28,6 +32,26 @@ const Roterer = () => {
         transition: 'background-image 0.5s ease-in-out',
       }}
     >
+    <button 
+    onClick={() => {setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+     console.log('Button clicked!');
+
+    }}
+
+        style={{
+          position: 'absolute',
+          bottom: '10px',
+          left: '10px',
+          padding: '10px 20px',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          color: 'white',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+        }}
+      >
+        neste bilde 
+      </button>
     </div>
   );
 };

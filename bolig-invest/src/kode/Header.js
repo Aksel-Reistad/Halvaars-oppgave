@@ -6,24 +6,21 @@ import ProduktSide from '../sider/ProduktSide.js';
 
 function TopLinker() {
   return (
-    <div className='header-teks'    >
+    <div className="header-container">
       <nav>
-        <ul>
+        <ul className="header-nav">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Om oss</Link>
           </li>
-
-            <div>
-            <Link to="/ProduktSide">Produkt Side</Link>
-            </div>
-            <div>
-            <Link to="/AnsateSide">Ansate Side</Link>
-            </div>
-            <div>
-            <Link to="/Hjemmeside">Hjemmeside</Link>
-            </div>
-            
-
+          <li>
+            <Link to="/ProduktSide">Prosjekter</Link>
+          </li>
+          <li>
+            <Link to="/Hjemmeside">Hjemme side</Link>
+          </li>
+          <li>
+            <Link to="/AnsateSide">AnsateSide</Link>
+          </li>
         </ul>
       </nav>
       <Routes>

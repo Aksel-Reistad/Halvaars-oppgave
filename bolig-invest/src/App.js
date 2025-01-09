@@ -5,7 +5,7 @@ import TopLinker from './kode/Header.js';
 
 function App() {
   return (
-    <div className="header-tekst">
+    <div>
       <Router>
         <TopLinker />
         {/* <Roterer /> */}
