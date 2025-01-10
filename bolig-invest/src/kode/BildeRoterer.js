@@ -1,43 +1,51 @@
 import React, { useEffect, useState } from 'react';
-//vis jeg fikser en dattabase husk å dra bildene derfra sammen med teksten jeg skal linke til det 
 import img1 from '../bilder/1.jpg';
 import img2 from '../bilder/2.jpg';
 import img3 from '../bilder/3.jpg';
 
 const Roterer = () => {
   const images = [img1, img2, img3];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => {
-        const nextIndex = (prevIndex + 1) % images.length;
-        console.log("den endrer seg på grunnen av tid");
-        return nextIndex;
-      });
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      console.log('Endrer bilde basert på tid');
     }, 5000);
     return () => clearInterval(interval);
   }, [images.length]);
 
+  const handleImageClick = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+    console.log('Bilde klikket! Går til forrige bilde.');
+  };
+
+  const handleButtonClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    console.log('Knapp klikket! Går til neste bilde.');
+  };
+
   return (
     <div
-    // fjern senere i prosjektet når jeg har ettablert sidene fordi form og størelse bør styres derfra 
+      onClick={handleImageClick}
       style={{
-        height: '70vh',
+        height: '50vh',
+        width: "30vh",
         backgroundImage: `url(${images[currentIndex]})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         transition: 'background-image 0.5s ease-in-out',
+        cursor: 'pointer',
+        position: 'relative',
       }}
     >
-    <button 
-    onClick={() => {setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-     console.log('Button clicked!');
-
-    }}
-
+      <button
+        onClick={(e) => {
+          e.stopPropagation(); // Hindrer knappens klikk fra å trigge bildet sitt onClick
+          handleButtonClick();
+        }}
         style={{
           position: 'absolute',
           bottom: '10px',
@@ -50,7 +58,7 @@ const Roterer = () => {
           cursor: 'pointer',
         }}
       >
-        neste bilde 
+        Neste bilde
       </button>
     </div>
   );
