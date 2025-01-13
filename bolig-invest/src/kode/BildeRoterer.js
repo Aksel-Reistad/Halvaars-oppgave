@@ -3,7 +3,7 @@ import img1 from '../bilder/1.jpg';
 import img2 from '../bilder/2.jpg';
 import img3 from '../bilder/3.jpg';
 
-const Roterer = () => {
+const Roterer = ({ style }) => {  
   const images = [img1, img2, img3];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -32,13 +32,14 @@ const Roterer = () => {
       onClick={handleImageClick}
       style={{
         height: '50vh',
-        width: "30vh",
+        width: '30vh',
         backgroundImage: `url(${images[currentIndex]})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         transition: 'background-image 0.5s ease-in-out',
         cursor: 'pointer',
         position: 'relative',
+        ...style,
       }}
     >
       <button

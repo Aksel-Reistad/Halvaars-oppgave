@@ -1,6 +1,11 @@
 .App {
     text-align: center;
+    
   }
+  .flex{
+  display: flex;
+  }
+  
   
   .App-logo {
     height: 40vmin;
@@ -134,7 +139,115 @@
   width: 100%; /* Understreken dekker hele teksten */
 }
 
-
-
-
 /* ikke lenger for header   */
+
+/* for sidene  */
+.bilde-hjemmeside{
+  
+}
+
+.tekst-Mellomrom{
+  padding-bottom: 1vh;
+  padding-top: 2vh;
+  padding-right: 10vh;
+  display: flex;
+  
+}
+.tekst-bloker{
+  margin-right: 10vh;
+  margin-left: 10vh;
+
+  /* border-top: 1px solid #888; */
+
+  width: 30vh;
+  width:40vh; 
+  height:30vh;
+   /* border-radius: 15px; kuter ned gjørnene */
+}
+
+
+.tekst-over {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center; /* Sentraliserer teksten */
+  color: #333;
+}
+.tekst-titel{
+  border-bottom: 1px solid #888;
+}
+
+
+/* for bildene */
+
+
+
+
+
+.bilde-hjemmeside{
+
+  height: '50vh';
+  width: "30vh";
+  /* backgroundImage: `url(${images[currentIndex]})`; */
+  backgroundSize: 'cover';
+  backgroundPosition: 'center';
+  transition: 'background-image 0.5s ease-in-out';
+  cursor: 'pointer';
+  position: 'relative';
+}
+
+//skjema 
+.form-container {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 300px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.submit-button {
+  background-color:rgb(5, 5, 5);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color:rgb(85, 85, 85);
+}
+
+.close-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.close-button:hover {
+  background-color: #c82333;
+}
