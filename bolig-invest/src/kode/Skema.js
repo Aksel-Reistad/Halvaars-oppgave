@@ -4,8 +4,8 @@ import '../App.css';
 const Skjema = () => {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
+    Titel: '',
+    Meldig: '',
     email: ''
   });
   const [error, setError] = useState('');
@@ -38,7 +38,7 @@ const Skjema = () => {
   return (
     <div className="app-container">
       <button onClick={toggleForm} className="toggle-button">
-        {showForm ? 'Lukk Login Skjerm':' Login'}
+        {showForm ? 'Lukk Kontaktskjema':' Ta kontakt'}
       </button>
 
       {showForm && (
@@ -47,24 +47,24 @@ const Skjema = () => {
             <h2>Kontaktskjema</h2>
 
             <div className="form-group">
-              <label htmlFor="username">Brukernavn:</label>
+              <label htmlFor="Titel">Titel:</label>
               <input
                 type="text"
-                id="username"
-                name="username"
-                value={formData.username}
+                id="Titel"
+                name="Titel"
+                value={formData.Titel}
                 onChange={handleChange}
                 required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="password">Passord:</label>
+              <label htmlFor="Meldig">Meldig:</label>
               <input
-                type="password"
-                id="password"
-                name="password"
-                value={formData.password}
+                type="Meldig"
+                id="Meldig"
+                name="Meldig"
+                value={formData.Meldig}
                 onChange={handleChange}
                 required
               />

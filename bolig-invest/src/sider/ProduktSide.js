@@ -18,7 +18,7 @@ function ProduktSide() {
   
   return (
     <div className="App">
-      <p>dette er hjemesiden</p>
+      <p>Dette er vår produktside</p>
       <div style={containerStyle}>
         <Roterer style={rotererStyle} />
         <Roterer style={rotererStyle} />

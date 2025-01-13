@@ -14,7 +14,6 @@ function Hjemmeside() {
 
   return (
     <div className="App">
-      dette er hjemesiden
 
       <Roterer style={rotererStyle} />
       

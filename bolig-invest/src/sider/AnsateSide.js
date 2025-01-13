@@ -1,6 +1,8 @@
+import React from 'react';
 import RotererAn from '../kode/BildeRotererAnsate.js';
-import Roterer from '../kode/BildeRotererAnsate.js';
-import Skjema from '../kode/Skema.js';
+import VideoPlayer from '../kode/Video.js';
+import videoFile from "../bilder/video.mp4";
+
 
 function AnsateSide() {
 
@@ -16,10 +18,10 @@ function AnsateSide() {
   
     return (
       <div className="App">
-        dette er hjemesiden
+        <h1>Dette er hjemesiden</h1>
   
         <RotererAn style={rotererStyle} />
-        
+        <VideoPlayer videoSrc={videoFile} />
        
       </div>
     );
