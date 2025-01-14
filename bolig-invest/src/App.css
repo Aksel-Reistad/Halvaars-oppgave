@@ -183,7 +183,6 @@
 
 
 
-
 .bilde-hjemmeside{
 
   height: '50vh';
@@ -196,7 +195,7 @@
   position: 'relative';
 }
 
-//skjema 
+/* skjema  */
 .form-container {
   position: fixed;
   top: 20%;
