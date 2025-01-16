@@ -32,7 +32,6 @@ const Skjema = () => {
     }
     setError('');
     alert('Skjema sendt!');
-    // Her kan du legge til logikk for å sende data til serveren
   };
 
   return (
