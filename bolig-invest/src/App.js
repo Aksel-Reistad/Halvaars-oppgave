@@ -18,7 +18,7 @@ function App() {
       }
     }, [navigate]);
     
-    return null; // Denne komponenten returnere ikke noe
+    return null;
   };
 
   return (

@@ -15,21 +15,21 @@ const Roterer = ({ style }) => {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const handleImageClick = () => {
+  const ForigeBilde = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
     console.log('Bilde klikket! Går til forrige bilde.');
   };
 
-  const handleButtonClick = () => {
+  const NesteBilde = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     console.log('Knapp klikket! Går til neste bilde.');
   };
 
   return (
     <div
-      onClick={handleImageClick}
+      onClick={ForigeBilde}
       style={{
         height: '50vh',
         width: '30vh',
@@ -45,7 +45,7 @@ const Roterer = ({ style }) => {
       <button
         onClick={(e) => {
           e.stopPropagation(); // Hindrer knappens klikk fra å trigge bildet sitt onClick
-          handleButtonClick();
+          NesteBilde();
         }}
         style={{
           position: 'absolute',
